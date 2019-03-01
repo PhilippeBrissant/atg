@@ -1,0 +1,24 @@
+<h2>Conversão</h2>
+
+Converter: &nbsp;<input id="valor" type="text" (keyup)="onKeyUp($event);converter()"/>&nbsp;
+<select #de (change)="onSelectDe(de.value);converter()">
+  <option selected>USD</option>
+  <option >EUR</option>
+  <option >GBP</option>
+  <option >JPY</option>
+  <option >CNH</option>
+</select>
+<br/>
+para:&nbsp;
+<select #para (change)="onSelectPara(para.value);converter()">
+  <option selected>USD</option>
+  <option >EUR</option>
+  <option >GBP</option>
+  <option >JPY</option>
+  <option >CNH</option>
+</select>
+
+<br/>
+<button (click)="converter()">Converter!</button>
+
+<h4>{{valor}}</h4>
