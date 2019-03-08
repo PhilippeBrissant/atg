@@ -29,9 +29,9 @@ int main()
         printf("\n1: Insere elemento na lista");
         printf("\n2: Retira elemento da lista");
         printf("\n3: Listar elementos");
-        printf("\n4: Buscar elementos");
+        printf("\n4: Buscar elemento");
         printf("\n0: Sair");
-        printf("\n\nDigite a opcao (0 - 3): ");
+        printf("\n\nDigite a opcao (0 - 4): ");
         scanf("%d", &op);
 
         switch (op)
@@ -103,14 +103,12 @@ void listar()
     if (listaVazia()!=0)
     {
         printf("\nOs elementos da lista sao: \n");
-        if(inicio != fim){
-            while (p -> prox != inicio)
-            {
-                printf("%d\n", p->info);
-                p = p -> prox;
-            }
-            printf("%d", fim -> info);
+        while (p -> prox != inicio)
+        {
+            printf("%d\n", p->info);
+            p = p -> prox;
         }
+        printf("%d", fim -> info);
     }
     else
         printf("\nLista Vazia!");
